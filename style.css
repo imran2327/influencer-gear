@@ -6,8 +6,7 @@
 
 
 header,
-main,
-footer {
+main  {
     max-width: 1400px;
     margin: 0 auto;
     padding: 10px;
@@ -85,7 +84,7 @@ button {
 }
 
 .hero_text a {
-    background-color: rgb(231, 51, 126);
+    background-color: #ff4d4d;
     color: whitesmoke;
     font-weight: 700;
     padding: 10px 20px;
@@ -106,14 +105,9 @@ button {
 
 }
 
-#nav_2 {
-    display: none;
-}
+
 
 @media screen and (max-width: 568px) {
-    header #nav_1 {
-        display: none;
-    }
 
     #hero_area {
         display: flex;
@@ -162,19 +156,18 @@ button {
         text-align: center;
     }
 
-   main #product {
-      display: grid;
-      grid-template-columns: repeat(1 , 1fr);
+    main #product {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
+
 }
 
 @media screen and (min-width: 568px) and (max-width: 1024px) {
 
-    header #nav_2 {
-        display: none;
-    }
 
     header #nav_1 {
+        display: flex;
         flex-direction: column;
     }
 
@@ -248,11 +241,27 @@ button {
     }
 
     main #product {
-      display: grid;
-      grid-template-columns: repeat(2 , 1fr);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+}
+
+@media screen and (max-width: 568px) {
+    header #nav_1 {
+        display: none;
     }
 
 }
+
+@media screen and (min-width: 568px) {
+    header #nav_2 {
+        display: none;
+    }
+}
+
 
 #product {
     display: grid;
@@ -303,6 +312,7 @@ p {
 .img_box {
     overflow: hidden;
     border-radius: 10px;
+
 }
 
 
@@ -317,4 +327,98 @@ p {
 .product_box:hover img {
     transform: scale(1.1);
 
+}
+
+main .main_last_stage h4 a {
+    color: #ff4d4d;
+}
+
+main .main_last_stage h4 {
+    color: #ff4d4d;
+    text-align: end;
+    margin: 50px auto;
+}
+
+.main_last_stage .gear {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.gear_1 {
+    width: 50%;
+}
+
+.gear_2 {
+    width: 50%;
+}
+
+.gear_1 img {
+    width: 100%;
+}
+
+.gear_2 h2 {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.gear_2 a {
+    color: white;
+    background-color: #ff4d4d;
+    padding: 10px 20px;
+    border-radius: 25px;
+   
+}
+
+@media screen and (max-width:768px) {
+     .main_last_stage .gear {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+        align-items: center;
+    }
+
+   .gear .gear_1 , .gear .gear_2 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+footer{
+    background-color: rgb(1, 1, 27);
+    color: white;
+    margin-top: 100px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer h2{
+    font-size: 24px;
+}
+
+footer p{
+    font-size: 14px;
+    color: #ddd;
+}
+footer h4{
+    font-size: 14px;
+}
+
+.icons{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 25px;
+   font-size: 20px;
+}
+
+.button{
+    transition: all 0.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.button:hover{ 
+     background-color: darkgray;
+     color: black;
+     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
